@@ -73,8 +73,9 @@ header {
 /* SEARCH BAR */
 
 .search-bar {
-  margin-top: -100px;
-  background: white;
+  /* margin-top: -100px; */
+  margin-top: 40px;
+  background: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 16px;
   display: flex;
@@ -102,33 +103,67 @@ header {
 /* PROMO SECTION */
 
 .promo {
-  margin: 40px auto;
+  position: relative;
   width: 90%;
-  max-width: 1000px;
-  background: #f5f7fb;
-  border-radius: 20px;
+  max-width: 1200px;
+  height: 250px;
+  margin: 50px auto;
+  border-radius: 30px;
+  background-image: url('/assets/img/promo.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.promo img {
-  height: 120px;
+.promo-content {
+  padding: 30px 40px;
+  margin-left: 30px;
+  border-radius: 20px;
+  max-width: 400px;
 }
 
-.promo-text {
-  font-size: 24px;
+.promo-content h2 {
+  color: #001542;
+  text-align: left;
+  font-family: "MontserratAlternates-Bold", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  width: 315px;
+  margin-bottom: 10px;
+}
+
+
+.promo-content .yellow {
+  color: #f6b200;
+}
+
+.promo-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .signup-btn {
-  margin-top: 10px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 20px;
-  background: #004aad;
+  border-radius: 25px;
+  background-color: #004aad;
   color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+.signup-btn:hover {
+  background-color: #003b92;
+}
+
+
 
 /* OFFERS SECTION */
 
