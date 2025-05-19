@@ -42,6 +42,8 @@ header {
   gap: 20px;
 }
 
+
+
 .nav-left.nav-left:hover {
   color: #ffb30d;
   text-decoration: underline;
