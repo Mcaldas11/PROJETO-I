@@ -79,3 +79,8 @@ function finalizeTravelers() {
 function selectClass(className) {
   document.getElementById('selected-class').textContent = className;
 }
+
+// Placeholder for search button
+function performSearch() {
+  alert('Search triggered!');
+}
