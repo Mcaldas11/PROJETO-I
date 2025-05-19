@@ -1,8 +1,17 @@
-* {
+/* import of website fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Montserrat";
+}
+h1, h2, h3 {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
@@ -33,6 +42,12 @@ header {
   gap: 20px;
 }
 
+.nav-left.nav-left:hover {
+  color: #ffb30d;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
 .navbar a {
   text-decoration: none;
   color: #fff;
@@ -47,6 +62,7 @@ header {
     margin-left: 25px;
     cursor: pointer;
     font-size: 20px; 
+    color: #ffffff;
   }
 
 /* HERO SECTION */
@@ -55,7 +71,6 @@ header {
   height: 100vh;
   background: url('/assets/img/a350.png') no-repeat center center/cover;
   position: relative;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,12 +79,13 @@ header {
 }
 
 .hero h1 span {
-  transition: all 0.5s ease-in-out;
+  margin-top: 247px;
+  transition: all 1s ease;
 }
 
 .animated-text {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 96px;
+
 }
 
 .yellow {
@@ -125,15 +141,86 @@ header {
     display: block;
   }
 
+  .dropdown {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  min-width: 220px;
+  z-index: 1000;
+  padding: 10px;
+  color: black; /* ou white, se fundo for escuro */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.row span {
+  flex: 1;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.counter span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.dropdown-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.done-btn {
+  background-color: #0064d2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.done-btn:hover {
+  background-color: #0051a8;
+}
+
 /* PROMO SECTION */
 
 .promo {
   position: relative;
-  width: 90%;
+  width: 928px;
   max-width: 1200px;
-  height: 250px;
+  height: 195px;
   margin: 50px auto;
-  border-radius: 30px;
+  flex-shrink: 50px;
+  border-radius: 70px;
   background-image: url('/assets/img/promo.png');
   background-size: cover;
   background-position: center;

@@ -63,12 +63,30 @@
           <img src="/assets/img/people.png" alt="Travelers">
           <div onclick="toggleDropdown('travelers-dropdown')">
             <span class="input-title">Travelers</span>
-            <span class="input-value" id="selected-travelers">1 Adult</span>
+            <span class="input-value" id="selected-travelers">2 Adults</span>
           </div>
-          <div class="dropdown" id="travelers-dropdown">
-            <div onclick="selectTravelers(1)">1 Adult</div>
-            <div onclick="selectTravelers(2)">2 Adults</div>
-            <div onclick="selectTravelers(3)">3 Adults</div>
+
+          <div class="dropdown" id="travelers-dropdown" style="display: none;">
+            <div class="row">
+              <span>Adults (12+)</span>
+              <button onclick="updateCount('adults', -1)">−</button>
+              <span id="adults-count">2</span>
+              <button onclick="updateCount('adults', 1)">+</button>
+            </div>
+            <div class="row">
+              <span>Children (2–11)</span>
+              <button onclick="updateCount('children', -1)">−</button>
+              <span id="children-count">0</span>
+              <button onclick="updateCount('children', 1)">+</button>
+            </div>
+            <div class="row">
+              <span>Infants (&lt;2)</span>
+              <button onclick="updateCount('infants', -1)">−</button>
+              <span id="infants-count">0</span>
+              <button onclick="updateCount('infants', 1)">+</button>
+            </div>
+            <hr class="dropdown-divider">
+            <button class="done-btn" onclick="closeAllDropdowns(); finalizeTravelers()">Done</button>
           </div>
         </div>
 
@@ -120,5 +138,7 @@
   </footer>
 
   <script src="/js/views/HerotextViews.js"></script>
+  <script src="/js/views/SearchbarViews.js"></script>
+
 </body>
 </html>
